@@ -26,5 +26,6 @@ export class VehiclesService{
    async deleteVehicule(id: number): Promise<any>{
        return await this.vehicleRepository.delete(id);
    }
+   
 
 }

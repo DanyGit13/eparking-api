@@ -31,7 +31,7 @@ export class UsersController {
     }
 
     @Delete('/:id')
-    remove(@Param('id') id: string): string {
-        return `This action removes a #${id} user`;
+    remove(@Param('id') id: number): Promise<any> {
+        return this.usersService.deleteUser(id);
     }
 }
